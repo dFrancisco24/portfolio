@@ -5,21 +5,40 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-h1, h2 {
-    margin: 10px 0;
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* ===== Profile Image ===== */
+#profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+#profile-img:hover {
+    transform: scale(1.05);
 }
 
 /* ===== Button Styles ===== */
 button {
-    padding: 10px 25px;
+    padding: 12px 30px;
     margin-top: 15px;
     cursor: pointer;
     border: none;
@@ -27,6 +46,7 @@ button {
     background-color: #4caf50;
     color: #fff;
     font-weight: bold;
+    font-size: 1em;
     transition: all 0.3s ease;
 }
 
@@ -37,18 +57,45 @@ button:hover {
 
 /* ===== Sections ===== */
 section {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.4s ease;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
 }
 
+section:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== List Styles ===== */
 ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(6px);
+    color: #4caf50;
+}
+
+/* ===== Links in Projects ===== */
+section a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+section a:hover {
+    color: #4caf50;
+    transform: scale(1.05);
 }
 
 /* ===== Dark Theme ===== */
@@ -58,17 +105,14 @@ body.dark {
 }
 
 body.dark section {
-    background-color: rgba(30, 30, 30, 0.9);
+    background-color: rgba(30, 30, 30, 0.95);
 }
 
-/* ===== Interactive Hover Effects for List Items ===== */
-li {
-    margin-bottom: 10px;
-    transition: transform 0.2s ease, color 0.2s ease;
+body.dark section a {
+    color: #66aaff;
 }
 
-li:hover {
-    transform: translateX(5px);
+body.dark section a:hover {
     color: #4caf50;
 }
 
@@ -79,10 +123,11 @@ li:hover {
     }
 
     section {
-        padding: 15px;
+        padding: 20px;
     }
 
     button {
         width: 100%;
+        font-size: 1em;
     }
 }
